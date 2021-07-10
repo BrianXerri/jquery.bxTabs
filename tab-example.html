@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">
+<head>
+	<title>bxTabs Demo</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery.bxTabs.css" type="text/css" />
+
+	<script type="text/javascript" src="js/jquery-1.5.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bxTabs.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			// Tabbing setup
+			$('ul.bxTabs li').bxTabs({ tabbedContentSelector: 'ul.bxTabContent li' });
+			
+			// Example of changing the tabs programmatically
+			$('.tabClickButton').click(function() {
+				var index = $(this).attr('href').replace('#','');
+				// Go directly to tab
+				$('ul.bxTabs li').bxTabs.goToTab(index);
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		
+		<div class="quickLinks">
+			<a class="tabClickButton" href="#0">Go To Tab 1</a><br/>
+			<a class="tabClickButton" href="#1">Go To Tab 2</a><br/>
+			<a class="tabClickButton" href="#2">Go To Tab 3</a><br/>
+		</div>
+
+		<!-- Tab Contents -->
+		<ul class="bxTabContent">
+			<li class="current">
+				<h1>Chicken Fingers</h1>
+				<p>
+					Fusce fringilla nisi posuere lorem molestie porttitor. Nam tempor tincidunt feugiat. Nulla facilisi. Sed nisi dolor, convallis sit amet pellentesque vitae, consequat vitae arcu. Donec eget ligula vel mauris egestas tincidunt in quis enim. Donec ac diam sit amet enim scelerisque porttitor in vitae velit. Curabitur id magna eros, at dictum nunc?
+				</p>
+				<p>
+					In orci justo, eleifend eu viverra a, suscipit sit amet elit. Sed quam ligula, tempus sed ullamcorper non, viverra in odio! Donec at libero dolor. Phasellus convallis arcu vel nulla faucibus vel aliquet tortor blandit. Cras pellentesque faucibus tempus.
+				</p>
+			</li>
+			<li>
+				<h1>Cheese Burger</h1>
+				<p>
+					Maecenas faucibus mollis fermentum. Vivamus quis mauris id purus euismod gravida. Nam lobortis condimentum eros et porttitor. Aenean est magna, iaculis non porttitor at, aliquet ac lacus. Sed id velit ac diam sollicitudin posuere. Integer eleifend condimentum velit vel malesuada. Curabitur dignissim augue dolor, quis facilisis nibh. 
+				</p>
+				<p>
+					Phasellus bibendum sem et erat fringilla sed pretium urna pharetra. Cras eu magna ac nisi scelerisque mattis at nec risus. Nullam et leo justo. Duis sed est vel dolor mattis sollicitudin. Suspendisse dignissim congue urna quis blandit. In auctor, nibh bibendum vulputate aliquet, velit nisi feugiat lorem, vitae tempor neque risus a lectus. Nulla malesuada tempus odio ac tincidunt. Sed quam lacus, pellentesque et sagittis in, porttitor aliquet est. Sed eu viverra diam. Aliquam erat volutpat. 
+				</p>
+			</li>
+			<li>
+				<h1>Pizza Pocket</h1>
+				<p>
+					Quisque accumsan iaculis risus ut imperdiet. Fusce elementum magna ut velit euismod vitae auctor orci lacinia. Proin feugiat sollicitudin urna; sed commodo nibh aliquam vitae. Donec egestas euismod lacinia! Nulla facilisi. Duis ac nisi eros, vitae sodales purus. 
+				</p>
+				<p>
+					Sed dignissim velit eget sapien cursus ornare. In adipiscing, dui sed pharetra aliquet; erat velit ornare metus; nec suscipit tellus enim eget risus. Proin ultricies, ante et pharetra eleifend, orci ante feugiat sem, eu pulvinar nulla lacus quis magna. Aliquam erat volutpat. Etiam nec euismod dui! Praesent id vulputate magna? 
+				</p>
+			</li>
+		</ul>
+
+		<!-- Tabs -->
+		<ul class="bxTabs">
+			<li class="first selected">
+				<h2>Chicken Fingers</h2>
+				<p>
+					Aenean fermentum, elit eget tint condimentum, eros ipsum rutrum.
+				</p>
+			</li>
+			<li>
+				<h2>Cheese Burger</h2>
+				<p>
+					Vivamus eros metus, tristique sit amet, molestie dignissim, mauada.
+				</p>
+			</li>
+			<li>
+				<h2>Pizza Pocket</h2>
+				<p>
+					Cras egestas diam sed ante. Nullam placerat rhoncus sapien.
+				</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
